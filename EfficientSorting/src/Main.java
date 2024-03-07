@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-
+        /*
         int[] ns = {10, 100, 1000, 10000, 100000, 200000, 300000, 500000, 600000};
         int[] test;
         long ini;
@@ -10,7 +10,7 @@ public class Main {
         int[] arr = invertedArray(10);
         Sorting.quickSort(arr, 0, arr.length - 1);
         printArray(arr);
-/*
+
         for (int n : ns) {
             //test = generateRandomArray(n);
             test = invertedArray(n);
@@ -24,8 +24,21 @@ public class Main {
             System.out.println(fin - ini + " ms");
         }
 
- */
-
+        */
+        /*
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(5);
+        list.add(3);
+        list.add(7);
+        list.add(1);
+        list.add(9);
+        list.add(2);
+        list.add(6);
+        list.add(4);
+        System.out.println(list);
+        list.mergeSort();
+        System.out.println(list);
+         */
     }
 
 
