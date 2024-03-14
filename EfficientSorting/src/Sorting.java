@@ -24,7 +24,7 @@ public class Sorting {
     }
 
     private static int partition(int[] arr, int low, int high) {
-        int pivot = getPivot(arr);
+        int pivot = getPivot(arr, low, high);
         int split = low;
         for (int j = low; j <= high - 1; j++) {
             if (arr[j] < pivot) {
@@ -90,27 +90,13 @@ public class Sorting {
     }
 
 
-    private static int getPivot (int[] arr) {
-        int low = 0;
-        int high = arr.length - 1;
+    private static int getPivot (int[] arr, int low, int high) {
         int mid = (low + high) / 2;
-        if (arr[low] < arr[mid]) {
-            if (arr[mid] < arr[high]) {
-                return arr[mid];
-            } else if (arr[low] < arr[high]) {
-                return arr[high];
-            } else {
-                return arr[low];
-            }
-        } else {
-            if (arr[low] < arr[high]) {
-                return arr[low];
-            } else if (arr[mid] < arr[high]) {
-                return arr[high];
-            } else {
-                return arr[mid];
-            }
-        }
+
+        if (arr[low] > arr[mid]) swap(arr, low, mid);
+        if (arr[high] < arr[low]) swap(arr, low, high);
+        else if (arr[mid] < arr[high]) swap(arr, mid, high);
+        return arr[high];
     }
 
 }

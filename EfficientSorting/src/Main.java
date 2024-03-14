@@ -39,6 +39,12 @@ public class Main {
         list.mergeSort();
         System.out.println(list);
          */
+        int[] arr = generateRandomArray(10);
+        printArray(arr);
+        System.out.println();
+        Sorting.quickSort(arr, 0, arr.length - 1);
+        printArray(arr);
+
     }
 
 
