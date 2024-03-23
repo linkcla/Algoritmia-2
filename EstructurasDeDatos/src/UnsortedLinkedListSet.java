@@ -11,7 +11,6 @@ public class UnsortedLinkedListSet<E> {
         }
     }
 
-    // TODO: all
     private Node first;
     
     public UnsortedLinkedListSet() {
@@ -28,7 +27,7 @@ public class UnsortedLinkedListSet<E> {
     }
 
     public boolean add(E elem) {
-        if (!contains(elem)) return false;
+        if (contains(elem)) return false;
         first = new Node(elem, first);
         return false;
     }
