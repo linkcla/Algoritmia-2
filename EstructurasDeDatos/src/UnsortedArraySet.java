@@ -23,9 +23,11 @@ public class UnsortedArraySet<E> {
     // Afegir un element al conjunt (si encara no es troba present)
     // Retorna true si s'ha canviat el conjunt
     public boolean add(E elem) {
-        if (n < array.length - 1 && !contains(elem)) return false;
-        array[n++] = elem;
-        return true;
+        if (n < array.length && !contains(elem)){
+            array[n++] = elem;
+            return true;
+        }
+        return false;
     }
 
     // Eliminar un element del conjunt (si es troba present)
