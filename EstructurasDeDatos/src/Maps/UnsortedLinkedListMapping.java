@@ -1,3 +1,5 @@
+package Maps;
+
 import java.util.Iterator;
 
 public class UnsortedLinkedListMapping<K, V> {
@@ -75,7 +77,7 @@ public class UnsortedLinkedListMapping<K, V> {
     private class IteratorUnsortedLinkedListMapping implements Iterator {
         private Node idxIterator;
         private IteratorUnsortedLinkedListMapping() { idxIterator = first; }
-        public boolean hasNext() { return idxIterator.next != null; }
+        public boolean hasNext() { return idxIterator != null; }
         public Object next() {
             Pair pair = new Pair<>(idxIterator.key, idxIterator.value);
             idxIterator = idxIterator.next;

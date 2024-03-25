@@ -1,3 +1,5 @@
+package Maps;
+
 import javax.management.ObjectName;
 import java.util.Iterator;
 
@@ -68,6 +70,8 @@ public class UnsortedArrayMapping<K, V> {
         }
         return pos;
     }
+
+    public Iterator iterator() { return new IteratorUnsortedArrayMapping(); }
 
     private class IteratorUnsortedArrayMapping implements Iterator {
         private int iteratorI;

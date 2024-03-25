@@ -1,3 +1,5 @@
+package Sets;
+
 import java.util.Iterator;
 
 public class UnsortedLinkedListSet<E> {
@@ -57,7 +59,7 @@ public class UnsortedLinkedListSet<E> {
     private class IteratorUnsortedLinkedListSet implements Iterator {
         private Node idxIterator;
         private IteratorUnsortedLinkedListSet() { idxIterator = first; }
-        public boolean hasNext() { return  idxIterator.next != null ;}
+        public boolean hasNext() { return  idxIterator != null ;}
         public Object next() {
             E elem = idxIterator.elem;
             idxIterator = idxIterator.next;
